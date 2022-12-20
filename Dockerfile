@@ -1,4 +1,4 @@
-FROM node:15.12.0-alpine3.13
+FROM node:16.18.1-alpine
 
 RUN apk update && apk add --no-cache git curl && curl -o- -L https://yarnpkg.com/install.sh | sh
 
@@ -9,4 +9,3 @@ COPY package*.json ./
 RUN yarn install
 COPY . .
 
-# CMD ["echo", "run", "serve"]
